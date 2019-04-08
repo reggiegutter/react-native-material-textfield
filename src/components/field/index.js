@@ -90,7 +90,7 @@ export default class TextField extends PureComponent {
 
     renderAccessory: PropTypes.func,
 
-    prefix: PropTypes.string,
+    prefix: PropTypes.any,
     suffix: PropTypes.string,
 
     containerStyle: (ViewPropTypes || View.propTypes).style,
@@ -315,9 +315,14 @@ export default class TextField extends PureComponent {
     };
 
     return (
-      <Affix style={affixTextStyle} {...props}>
-        {affix}
-      </Affix>
+      <>
+        {focused && affix}
+        {!focused && (
+          <Affix style={affixTextStyle} {...props}>
+            teste
+          </Affix>
+        )}
+      </>
     );
   }
 
