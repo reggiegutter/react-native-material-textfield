@@ -1,5 +1,5 @@
 [npm-badge]: https://img.shields.io/npm/v/react-native-material-textfield.svg?colorB=ff6d00
-[npm-url]: https://npmjs.com/package/react-native-material-textfield
+[npm-url]: https://www.npmjs.com/package/react-native-tecnovix-material-textfield
 [license-badge]: https://img.shields.io/npm/l/react-native-material-textfield.svg?colorB=448aff
 [license-url]: https://raw.githubusercontent.com/n4kz/react-native-material-textfield/master/license.txt
 [travis-badge]: https://api.travis-ci.org/n4kz/react-native-material-textfield.svg?branch=master
@@ -16,8 +16,6 @@ https://github.com/n4kz/react-native-material-textfield
 https://www.npmjs.com/package/react-native-material-textfield
 
 Copyright 2017 Alexander Nazarov
-
-# Lib used by the company tecnovix
 
 Adaptations of inputs with specific customizations
 
