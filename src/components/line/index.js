@@ -8,22 +8,23 @@ export default class Line extends PureComponent {
   static propTypes = {
     type: PropTypes.oneOf(['solid', 'dotted', 'dashed', 'none']).isRequired,
     width: PropTypes.number.isRequired,
-    color: PropTypes.string.isRequired,
+    color: PropTypes.string.isRequired
   };
 
   render() {
     let {
       width: borderWidth,
       color: borderColor,
-      type: borderStyle,
+      type: borderStyle
     } = this.props;
 
     if ('none' === borderStyle) {
       return null;
     }
 
-    let [top, right, bottom, left] = [-2, -1.5, 0, -1.5]
-      .map((value) => value * borderWidth);
+    let [top, right, bottom, left] = [-2, -1.5, 0, -1.5].map(
+      value => value * borderWidth
+    );
 
     let lineStyle = {
       borderColor,
@@ -32,11 +33,9 @@ export default class Line extends PureComponent {
       right,
       bottom,
       left,
-      borderWidth,
+      borderWidth
     };
 
-    return (
-      <View style={[styles.line, lineStyle]} pointerEvents='none' />
-    );
+    return <View style={[styles.line, lineStyle]} pointerEvents="none" />;
   }
 }
