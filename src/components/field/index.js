@@ -317,11 +317,7 @@ export default class TextField extends PureComponent {
     return (
       <>
         {focused && affix}
-        {!focused && (
-          <Affix style={affixTextStyle} {...props}>
-            teste
-          </Affix>
-        )}
+        {!focused && <></>}
       </>
     );
   }
