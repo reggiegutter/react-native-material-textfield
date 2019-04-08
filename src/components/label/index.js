@@ -83,6 +83,7 @@ export default class Label extends PureComponent {
       baseColor,
       tintColor,
       baseSize,
+      fontAnimate,
       basePadding,
       style,
       errored,
