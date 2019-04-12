@@ -316,8 +316,8 @@ export default class TextField extends PureComponent {
 
     return (
       <>
-        {focused && affix}
-        {!focused && <></>}
+        {(active || focused) && affix}
+        {!active && <></>}
       </>
     );
   }
