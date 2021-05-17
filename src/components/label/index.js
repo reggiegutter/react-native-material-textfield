@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types';
-import React, { PureComponent } from 'react';
-import { Animated } from 'react-native';
+import PropTypes from "prop-types";
+import React, { PureComponent } from "react";
+import { Animated } from "react-native";
 
 export default class Label extends PureComponent {
   static defaultProps = {
@@ -9,7 +9,7 @@ export default class Label extends PureComponent {
     active: false,
     focused: false,
     errored: false,
-    restricted: false
+    restricted: false,
   };
 
   static propTypes = {
@@ -30,12 +30,10 @@ export default class Label extends PureComponent {
 
     animationDuration: PropTypes.number.isRequired,
 
-    style: Animated.Text.propTypes.style,
-
     children: PropTypes.oneOfType([
       PropTypes.arrayOf(PropTypes.node),
-      PropTypes.node
-    ])
+      PropTypes.node,
+    ]),
   };
 
   constructor(props) {
@@ -43,7 +41,7 @@ export default class Label extends PureComponent {
 
     this.state = {
       input: new Animated.Value(this.inputState()),
-      focus: new Animated.Value(this.focusState())
+      focus: new Animated.Value(this.focusState()),
     };
   }
 
@@ -97,15 +95,15 @@ export default class Label extends PureComponent {
       ? errorColor
       : focus.interpolate({
           inputRange: [-1, 0, 1],
-          outputRange: [errorColor, baseColor, tintColor]
+          outputRange: [errorColor, baseColor, tintColor],
         });
 
     let top = input.interpolate({
       inputRange: [0, 1],
       outputRange: [
         baseSize + fontSize * 0.25,
-        baseSize - basePadding - activeFontSize
-      ]
+        baseSize - basePadding - activeFontSize,
+      ],
     });
 
     let textStyle = {};
@@ -114,24 +112,24 @@ export default class Label extends PureComponent {
       textStyle = {
         fontSize: input.interpolate({
           inputRange: [0, 1],
-          outputRange: [fontSize, activeFontSize]
+          outputRange: [fontSize, activeFontSize],
         }),
         fontFamily: fontAnimate,
-        color
+        color,
       };
     } else {
       textStyle = {
         fontSize: input.interpolate({
           inputRange: [0, 1],
-          outputRange: [fontSize, activeFontSize]
+          outputRange: [fontSize, activeFontSize],
         }),
-        color
+        color,
       };
     }
 
     let containerStyle = {
-      position: 'absolute',
-      top
+      position: "absolute",
+      top,
     };
 
     return (
