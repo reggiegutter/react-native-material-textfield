@@ -52,13 +52,21 @@ export default class Label extends PureComponent {
     if (focused ^ props.focused || active ^ props.active) {
       let toValue = this.inputState(props);
 
-      Animated.timing(input, { toValue, duration }).start();
+      Animated.timing(input, {
+        toValue,
+        duration,
+        useNativeDriver: true,
+      }).start();
     }
 
     if (focused ^ props.focused || errored ^ props.errored) {
       let toValue = this.focusState(props);
 
-      Animated.timing(focus, { toValue, duration }).start();
+      Animated.timing(focus, {
+        toValue,
+        duration,
+        useNativeDriver: true,
+      }).start();
     }
   }
 
