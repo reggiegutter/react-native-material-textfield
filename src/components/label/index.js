@@ -55,7 +55,7 @@ export default class Label extends PureComponent {
       Animated.timing(input, {
         toValue,
         duration,
-        useNativeDriver: true,
+        useNativeDriver: false,
       }).start();
     }
 
@@ -65,7 +65,7 @@ export default class Label extends PureComponent {
       Animated.timing(focus, {
         toValue,
         duration,
-        useNativeDriver: true,
+        useNativeDriver: false,
       }).start();
     }
   }

@@ -154,7 +154,7 @@ export default class TextField extends PureComponent {
       Animated.timing(focus, {
         toValue,
         duration,
-        useNativeDriver: true,
+        useNativeDriver: false,
       }).start(this.onFocusAnimationEnd);
     }
   }

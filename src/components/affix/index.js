@@ -48,7 +48,7 @@ export default class Affix extends PureComponent {
       Animated.timing(opacity, {
         toValue: props.active || props.focused ? 1 : 0,
         duration: animationDuration,
-        useNativeDriver: true,
+        useNativeDriver: false,
       }).start();
     }
   }
